@@ -2,6 +2,7 @@
 __pycache__/
 *.py[cod]
 *$py.class
+/accounts.json
 
 # Environment variables
 .env

@@ -1,0 +1,45 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environment variables
+.env
+
+# IDE-specific files
+.idea/
+.vscode/
+
+# Compiled Python files
+*.pyc
+
+# Dependency directories
+venv/
+env/
+env.bak/
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+*.egg
+
+# Logs and temporary files
+*.log
+*.swp
+*.swo
+*.bak
+
+# Visual Studio Code workspace settings
+.vscode/
+*.code-workspace
+
+# Mac OS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# Compiled executables
+*.exe
+*.out

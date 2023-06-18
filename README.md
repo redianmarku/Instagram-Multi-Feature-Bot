@@ -11,12 +11,10 @@
 ### Installation:
 
 1. Clone the repository:
-   git clone https://github.com/your-username/instagram-bot.git
+   git clone https://github.com/redianmarku/Instagram-Multi-Feature-Bot
 
 2. Install the required dependencies:
-   pip install selenium
-
-3. Download and install ChromeDriver from the official website (https://sites.google.com/a/chromium.org/chromedriver/downloads) according to your Chrome browser version.
+   `pip install -r requirements.txt`
 
 ### Usage:
 

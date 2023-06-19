@@ -40,7 +40,7 @@ class InstagramBot:
     def scrape_hashtag_posts(self, hashtag):
         # Open Instagram and navigate to the hashtag page
         self.driver.get(f"https://www.instagram.com/explore/tags/{hashtag}/")
-        time.sleep(5)
+        time.sleep(8)
         # Wait for the posts to load
         wait = WebDriverWait(self.driver, 10)
         # wait.until(EC.presence_of_element_located((By.XPATH, '//*[@id="mount_0_0_GQ"]/div/div/div[2]/div/div/div/div[1]/div[1]/div[2]/section/main/article/div[2]/div')))

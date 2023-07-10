@@ -1,6 +1,7 @@
 import time
 import json
-from selenium import webdriver
+#from selenium import webdriver
+import undetected_chromedriver as uc
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
@@ -17,7 +18,8 @@ class InstagramBot:
         chrome_options.add_argument("--window-size=930,820")
         # chrome_options.add_argument("--start-maximized")  # Maximize the Chrome window
         # Use webdriver_manager to automatically download and manage the ChromeDriver
-        self.driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=chrome_options)
+        # add undetected_chromedriver here 
+        self.driver = uc.Chrome(service=Service(ChromeDriverManager().install()), options=chrome_options)
 
     def login(self, email, password):
         # Open Instagram

@@ -90,13 +90,13 @@ class InstagramBot:
        
         for username in usernames:
              # Click the 'New Message' button
-            new_message_button = self.driver.find_element(By.XPATH, '//div/div/div[2]/div/div/div/div[1]/div[1]/div[2]/section/div/div/div/div[1]/div[1]/div/div[1]/div[2]/div/div/div')
+            new_message_button = self.driver.find_element(By.XPATH, '//div/div/div[2]/div/div/div/div[1]/div[1]/div[2]/section/div/div/div/div[1]/div/div[1]/div/div[1]/div[2]/div/div')
             new_message_button.click()
             time.sleep(2)
 
             # Wait for the recipient input field to become available
             wait = WebDriverWait(self.driver, 10)
-            recipient_input = wait.until(EC.presence_of_element_located((By.XPATH, '//div/div/div[3]/div/div/div[2]/div/div/div[1]/div/div[2]/div/div/div/div/div[2]/div/div[2]/div[2]/input')))
+            recipient_input = wait.until(EC.presence_of_element_located((By.XPATH, '//div/div/div[3]/div/div/div[1]/div/div[2]/div/div/div/div/div/div/div[1]/div/div[2]/div[2]/input')))
 
             # Type each username and press Enter to add as a recipient
             recipient_input.send_keys(username)
@@ -105,12 +105,12 @@ class InstagramBot:
             time.sleep(1)
 
             
-            select_button = wait.until(EC.element_to_be_clickable((By.XPATH, '//div/div/div[3]/div/div/div[2]/div/div/div[1]/div/div[2]/div/div/div/div/div[2]/div/div[3]/div/div[1]/div[1]/div/div/div[3]/div')))
+            select_button = wait.until(EC.element_to_be_clickable((By.XPATH, '//div/div/div[3]/div/div/div[1]/div/div[2]/div/div/div/div/div/div/div[1]/div/div[3]/div/div/div[1]/div[1]/div/div')))
             select_button.click()
             time.sleep(2)
 
             # Wait for the next button to become clickable
-            next_button = wait.until(EC.element_to_be_clickable((By.XPATH, '//div/div/div[3]/div/div/div[2]/div/div/div[1]/div/div[2]/div/div/div/div/div[2]/div/div[4]/div')))
+            next_button = wait.until(EC.element_to_be_clickable((By.XPATH, '//div/div/div[3]/div/div/div[1]/div/div[2]/div/div/div/div/div/div/div[1]/div/div[4]/div')))
 
             # Click the Next button to proceed to the message input
             next_button.click()

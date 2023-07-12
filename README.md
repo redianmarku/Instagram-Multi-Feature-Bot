@@ -11,6 +11,7 @@
 - Python 3.x
 - Selenium library
 - ChromeDriver
+- customtkinter
 
 ### Installation:
 

@@ -1,4 +1,4 @@
 selenium
 webdriver_manager
-customtkinter
 undetected-chromedriver
+customtkinter

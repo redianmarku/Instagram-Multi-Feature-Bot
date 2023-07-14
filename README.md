@@ -2,11 +2,16 @@
 
 ## This is a Python script for automating actions on Instagram, such as sending direct messages and commenting on posts.
 
+### Demo:
+
+![Alt Text](demo.png)
+
 ### Prerequisites:
 
 - Python 3.x
 - Selenium library
 - ChromeDriver
+- customtkinter
 
 ### Installation:
 

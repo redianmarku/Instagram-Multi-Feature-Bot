@@ -14,6 +14,7 @@ __pycache__/
 # Compiled Python files
 *.pyc
 
+
 # Dependency directories
 venv/
 env/
@@ -44,3 +45,4 @@ Thumbs.db
 # Compiled executables
 *.exe
 *.out
+pyvenv.cfg

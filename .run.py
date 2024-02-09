@@ -4,12 +4,13 @@ from InstagramBot import InstagramBot
 
 
 def load_accounts():
-        try:
-            with open("accounts.json", "r") as file:
-                accounts = json.load(file)
-        except FileNotFoundError:
-            accounts = []
-        return accounts
+    try:
+        with open("accounts.json", "r") as file:
+            accounts = json.load(file)
+    except FileNotFoundError:
+        accounts = []
+    return accounts
+
 
 def save_accounts(accounts):
     with open("accounts.json", "w") as file:
@@ -25,12 +26,16 @@ def create_bot(account):
 def main():
     parser = argparse.ArgumentParser(description="Instagram Bot")
 
-    parser.add_argument("-a", "--accounts", action="store_true", help="Use multiple accounts")
+    parser.add_argument(
+        "-a", "--accounts", action="store_true", help="Use multiple accounts"
+    )
     parser.add_argument("-c", "--comment", action="store_true", help="Comment on posts")
     parser.add_argument("-d", "--dm", action="store_true", help="Send direct messages")
     parser.add_argument("-ht", "--hashtag", help="Hashtag to scrape posts from")
     parser.add_argument("-cm", "--message", help="Comment or message to post")
-    parser.add_argument("-del", "--delay", type=int, default=5, help="Delay in seconds between actions")
+    parser.add_argument(
+        "-del", "--delay", type=int, default=5, help="Delay in seconds between actions"
+    )
 
     args = parser.parse_args()
 
@@ -61,10 +66,7 @@ def main():
         username = input("Enter your Instagram username: ")
         password = input("Enter your Instagram password: ")
 
-        account = {
-            "username": username,
-            "password": password
-        }
+        account = {"username": username, "password": password}
         bot = create_bot(account)
 
         save_accounts([account])
@@ -75,7 +77,9 @@ def main():
             return
 
         post_links = bot.scrape_hashtag_posts(hashtag=args.hashtag)
-        bot.comment_on_posts(links=post_links, comment=args.message, delay_time=args.delay)
+        bot.comment_on_posts(
+            links=post_links, comment=args.message, delay_time=args.delay
+        )
     elif args.dm:
         if not args.message:
             print("Please provide a message to send.")
@@ -86,6 +90,7 @@ def main():
         bot.send_dm(usernames=usernames, message=args.message, delay_time=args.delay)
     else:
         print("Please choose whether to comment (-c) or send direct messages (-d).")
+
 
 if __name__ == "__main__":
     main()
